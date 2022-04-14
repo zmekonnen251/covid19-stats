@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightpink: '#f593b8',
+        lightpink: '#c5346b',
       },
     },
   },

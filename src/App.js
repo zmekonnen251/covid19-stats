@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 
 const App = () => (
   <Router>
-    <div className="box-border text-white bg-lightpink pb-3">
+    <div className="box-border text-white bg-lightpink pb-3 mt-0">
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Main />} />
