@@ -9,11 +9,13 @@ import {
   covid19Reducer,
   continentReducer,
   countryReducer,
+  setCountry,
+  setContinent,
 } from './redux/reducer';
-
 import Main from './components/Main';
 import CountryMatrixCard from './components/CountryMatrixCard';
 import ContinentMatrixCard from './components/ContinentMatrixCard';
+import { SET_COUNTRY, SET_CONTINENT } from './redux/actionTypes';
 
 const rootReducer = combineReducers({
   covidData: covid19Reducer,
@@ -32,7 +34,7 @@ describe('Home Page', () => {
           <Router>
             <Main />
           </Router>
-        </Provider>
+        </Provider>,
       )
       .toJSON();
     expect(homePage).toMatchSnapshot();
@@ -52,7 +54,7 @@ describe('Countries List ', () => {
               onClickSetCountry="Ethiopia"
             />
           </Router>
-        </Provider>
+        </Provider>,
       )
       .toJSON();
     expect(countryCard).toMatchSnapshot();
@@ -70,13 +72,27 @@ describe('Countries List ', () => {
               name="Europe"
               totalConfirmed={500000}
               totalDeath={50000}
-              onClickSetContinent={'Europe'}
+              onClickSetContinent="Europe"
             />
             ;
           </Router>
-        </Provider>
+        </Provider>,
       )
       .toJSON();
     expect(continentCard).toMatchSnapshot();
+  });
+});
+
+describe('Pure Action Creators Test', () => {
+  test('SetCountry action creator test', () => {
+    const data = setCountry('Ghana');
+    expect(data.type).toEqual(SET_COUNTRY);
+    expect(data.payload.country).toEqual('Ghana');
+  });
+
+  test('SetContinent action creator test', () => {
+    const data = setContinent('Europe');
+    expect(data.type).toEqual(SET_CONTINENT);
+    expect(data.payload.continent).toEqual('Europe');
   });
 });
