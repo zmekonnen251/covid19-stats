@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
 import { setContinent } from '../redux/reducer';
-import classes from './MatrixCard.module.css';
 
 const MatrixCard = (props) => {
   const dispatch = useDispatch();
   const [continent, setContinentLocal] = useState('');
-  const {
-    name, totalConfirmed, totalDeath, onClickSetContinent,
-  } = props;
+  const { name, totalConfirmed, totalDeath, onClickSetContinent } = props;
 
   const continentMatrixClickHandler = () => {
     setContinentLocal(onClickSetContinent);
@@ -22,19 +20,16 @@ const MatrixCard = (props) => {
   return (
     <>
       <div
-        className={classes.card}
+        className="relative border p-8 cursor-pointer flex flex-col items-center gap-1"
         role="presentation"
         onClick={continentMatrixClickHandler}
       >
-        <h1>{name}</h1>
-        <h3>
-          Total Confirmed Cases :
-          {totalConfirmed}
-        </h3>
-        <h3>
-          Total Deaths :
-          {totalDeath}
-        </h3>
+        <h1 className="text-4xl">{name}</h1>
+        <h3 className="text-lg">Total Confirmed Cases :{totalConfirmed}</h3>
+        <h3 className="text-lg">Total Deaths :{totalDeath}</h3>
+        <div className="absolute bottom-1 right-1 flex justify-end">
+          <BsFillArrowDownRightSquareFill />
+        </div>
       </div>
     </>
   );

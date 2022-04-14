@@ -5,10 +5,12 @@ import NavBar from './components/NavBar';
 
 const App = () => (
   <Router>
-    <NavBar />
-    <Routes>
-      <Route exact path="/" element={<Main />} />
-    </Routes>
+    <div className="box-border text-white bg-lightpink pb-3">
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+      </Routes>
+    </div>
   </Router>
 );
 

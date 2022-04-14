@@ -8,7 +8,9 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <div className="h-screen bg-lightpink">
+        <App />
+      </div>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

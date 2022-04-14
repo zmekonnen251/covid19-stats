@@ -17,8 +17,12 @@ const DateInputForm = () => {
   }, [date]);
   return (
     <>
-      <form>
-        <input type="date" onChange={DateChangeHandler} />
+      <form className="text-center  m-2">
+        <input
+          type="date"
+          onChange={DateChangeHandler}
+          className="bg-inherit text-inherit border p-1 mt-2"
+        />
       </form>
     </>
   );
