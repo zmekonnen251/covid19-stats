@@ -22,22 +22,22 @@ const WorldTotal = () => {
     });
   });
   return (
-    <div role="presentation" className="col-span-2">
+    <div role="presentation" className="sm:col-span-2">
       <h1 className="text-4xl mb-3 text-center">World Total</h1>
       <div className="border p-8 cursor-pointer flex flex-col items-center gap-1">
-        <h3 className="text-xl">
+        <h3 className="text-lg">
           Total Confirmed Cases :
           {totalConfirmed}
         </h3>
-        <h3 className="text-xl">
+        <h3 className="text-lg">
           Total Deaths :
           {totalDeaths}
         </h3>
-        <h3 className="text-xl">
+        <h3 className="text-lg">
           Total Recovered :
           {totalRecovered}
         </h3>
-        <h3 className="text-xl">
+        <h3 className="text-lg">
           Total Open Cases :
           {totalOpenCases}
         </h3>

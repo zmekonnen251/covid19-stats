@@ -7,10 +7,10 @@ const CountriesList = () => {
   const selectedContinent = useSelector((state) => state.continent.continent);
 
   const continentData = useSelector(
-    (state) => state.covidData.continents[selectedContinent].countries
+    (state) => state.covidData.continents[selectedContinent].countries,
   );
   const name = useSelector(
-    (state) => state.covidData.continents[selectedContinent].name
+    (state) => state.covidData.continents[selectedContinent].name,
   );
   console.log('Hey from countries List', continentData);
   return (

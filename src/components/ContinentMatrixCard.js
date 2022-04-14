@@ -7,7 +7,9 @@ import { setContinent } from '../redux/reducer';
 const MatrixCard = (props) => {
   const dispatch = useDispatch();
   const [continent, setContinentLocal] = useState('');
-  const { name, totalConfirmed, totalDeath, onClickSetContinent } = props;
+  const {
+    name, totalConfirmed, totalDeath, onClickSetContinent,
+  } = props;
 
   const continentMatrixClickHandler = () => {
     setContinentLocal(onClickSetContinent);
@@ -25,8 +27,14 @@ const MatrixCard = (props) => {
         onClick={continentMatrixClickHandler}
       >
         <h1 className="text-4xl">{name}</h1>
-        <h3 className="text-lg">Total Confirmed Cases :{totalConfirmed}</h3>
-        <h3 className="text-lg">Total Deaths :{totalDeath}</h3>
+        <h3 className="text-lg">
+          Total Confirmed Cases :
+          {totalConfirmed}
+        </h3>
+        <h3 className="text-lg">
+          Total Deaths :
+          {totalDeath}
+        </h3>
         <div className="absolute bottom-1 right-1 flex justify-end">
           <BsFillArrowDownRightSquareFill />
         </div>
