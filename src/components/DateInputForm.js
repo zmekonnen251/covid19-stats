@@ -13,7 +13,6 @@ const DateInputForm = () => {
 
   useEffect(() => {
     dispatch(loadData(date));
-    console.log(date);
   }, [date]);
   return (
     <>

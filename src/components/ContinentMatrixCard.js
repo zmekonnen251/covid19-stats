@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
 import { setContinent } from '../redux/reducer';
 
-const MatrixCard = (props) => {
+const ContinentMatrixCard = (props) => {
   const dispatch = useDispatch();
   const [continent, setContinentLocal] = useState('');
   const {
@@ -43,11 +43,11 @@ const MatrixCard = (props) => {
   );
 };
 
-MatrixCard.propTypes = {
+ContinentMatrixCard.propTypes = {
   name: PropTypes.string.isRequired,
   totalConfirmed: PropTypes.number.isRequired,
   totalDeath: PropTypes.number.isRequired,
   onClickSetContinent: PropTypes.string.isRequired,
 };
 
-export default MatrixCard;
+export default ContinentMatrixCard;

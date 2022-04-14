@@ -12,7 +12,6 @@ const CountriesList = () => {
   const name = useSelector(
     (state) => state.covidData.continents[selectedContinent].name,
   );
-  console.log('Hey from countries List', continentData);
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 m-7 odd:bg-white">

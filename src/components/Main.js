@@ -5,7 +5,6 @@ import ContinentSelector from './ContinentSelector';
 
 const Main = () => {
   const continentSet = useSelector((state) => state.continent.continent);
-  console.log(continentSet);
   return <>{!continentSet ? <ContinentSelector /> : <CountriesContainer />}</>;
 };
 

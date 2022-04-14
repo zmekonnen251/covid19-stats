@@ -8,16 +8,6 @@ const CountryDetails = () => {
     (state) => state.covidData.continents[selectedContinent].countries[selectedCountry],
   );
 
-  // name: 'Algeria';
-  // today_confirmed: 265730;
-  // today_deaths: 6874;
-  // today_new_confirmed: 0;
-  // today_new_deaths: 0;
-  // today_new_open_cases: 0;
-  // today_new_recovered: 0;
-  // today_open_cases: 139704;
-  // today_recovered: 119152;
-  // const { name, today_confirmed, today_deaths } = selectedCountryData;
   return (
     <>
       <div

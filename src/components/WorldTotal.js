@@ -8,8 +8,8 @@ const WorldTotal = () => {
   let totalOpenCases = 0;
 
   const covidData = useSelector((state) => state.covidData.continents);
-  console.log(covidData);
-  console.log(Object.keys(covidData));
+  const selectedDate = useSelector((state) => state.covidData.date);
+
   Object.keys(covidData).forEach((continent) => {
     Object.keys(covidData[continent].countries).forEach((country) => {
       totalConfirmed
@@ -24,6 +24,7 @@ const WorldTotal = () => {
   return (
     <div role="presentation" className="sm:col-span-2">
       <h1 className="text-4xl mb-3 text-center">World Total</h1>
+      <h1 className="text-2xl mb-3 text-center">{selectedDate}</h1>
       <div className="border p-8 cursor-pointer flex flex-col items-center gap-1">
         <h3 className="text-lg">
           Total Confirmed Cases :
