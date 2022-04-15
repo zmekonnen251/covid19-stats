@@ -9,7 +9,6 @@ import NavBar from './components/NavBar';
 const App = () => {
   const dispatch = useDispatch();
   const selectedCountry = useSelector((state) => state.country.country);
-  console.log(selectedCountry);
 
   useEffect(() => {
     dispatch(loadData());
@@ -21,7 +20,7 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <React.Fragment
+          <Route
             exact
             path="/Details"
             element={<CountryDetails selectedCountry={selectedCountry || ''} />}
