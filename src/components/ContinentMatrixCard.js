@@ -29,11 +29,11 @@ const ContinentMatrixCard = (props) => {
         <h1 className="text-4xl">{name}</h1>
         <h3 className="text-lg">
           Total Confirmed Cases :
-          {totalConfirmed}
+          {` ${totalConfirmed}`}
         </h3>
         <h3 className="text-lg">
           Total Deaths :
-          {totalDeath}
+          {` ${totalDeath}`}
         </h3>
         <div className="absolute bottom-1 right-1 flex justify-end">
           <BsFillArrowDownRightSquareFill />

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadData } from '../redux/reducer';
 
 const DateInputForm = () => {
   const dispatch = useDispatch();
   const [date, setDate] = useState('');
+
+  const selectedDate = useSelector((state) => state.covidData.date);
 
   const DateChangeHandler = (event) => {
     const inputDate = event.target.value;
@@ -21,6 +23,7 @@ const DateInputForm = () => {
           type="date"
           onChange={DateChangeHandler}
           className="bg-inherit text-inherit border p-1 mt-2"
+          value={selectedDate}
         />
       </form>
     </>
