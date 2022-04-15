@@ -15,7 +15,7 @@ COVID-19 Stats is a single-page app that delivers up-to-date information on COVI
 
 ## Live demo
 
-[live Demo](covidstatupdate.netlify.app)
+[live Demo](https://covidstatupdate.netlify.app/)
 
 ## video Presentation Link
 [Loom Link](https://www.loom.com/share/cbda22dcfbe746e79b85620cc764a136)
@@ -63,14 +63,15 @@ COVID-19 Stats is a single-page app that delivers up-to-date information on COVI
 - LinkedIn: [Zelalem G. Mekonnen](https://www.linkedin.com/in/zelalem-getachew/)
 
 
-
-
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
+
+## Acknowlegement
+> I would like to give my heartfelt gratitude to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for this amazing Design.
+
 
 ## Show your support
 
