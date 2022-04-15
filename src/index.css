@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Lato', system-ui, sans-serif;
+}
+
+body {
+  background-color: #c5346b;
+  margin: 0;
+}

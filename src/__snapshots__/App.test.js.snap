@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countries List  Continent Card renders correctly 1`] = `
+Array [
+  <div
+    className="relative border p-8 cursor-pointer flex flex-col items-center gap-1"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <h1
+      className="text-4xl"
+    >
+      Europe
+    </h1>
+    <h3
+      className="text-lg"
+    >
+      Total Confirmed Cases :
+      500000
+    </h3>
+    <h3
+      className="text-lg"
+    >
+      Total Deaths :
+      50000
+    </h3>
+    <div
+      className="absolute bottom-1 right-1 flex justify-end"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14 16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12zM5.904 5.197 10 9.293V6.525a.5.5 0 0 1 1 0V10.5a.5.5 0 0 1-.5.5H6.525a.5.5 0 0 1 0-1h2.768L5.197 5.904a.5.5 0 0 1 .707-.707z"
+        />
+      </svg>
+    </div>
+  </div>,
+  ";",
+]
+`;
+
+exports[`Countries List  Countries Card renders correctly 1`] = `
+<div
+  className="relative border p-8 cursor-pointer flex flex-col items-center gap-1"
+  onClick={[Function]}
+  role="presentation"
+>
+  <h1
+    className="text-3xl"
+  >
+    Ethiopia
+  </h1>
+  <h3
+    className="text-lg"
+  >
+    Total Confirmed Cases :
+    20000
+  </h3>
+  <h3
+    className="text-lg"
+  >
+    Total Deaths :
+    1000
+  </h3>
+  <div
+    className="absolute bottom-1 right-1 flex justify-end"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12zM5.904 5.197 10 9.293V6.525a.5.5 0 0 1 1 0V10.5a.5.5 0 0 1-.5.5H6.525a.5.5 0 0 1 0-1h2.768L5.197 5.904a.5.5 0 0 1 .707-.707z"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Home Page Home page renders correctly 1`] = `
+Array [
+  <h1
+    className="text-3xl font-bold underline text-center"
+  >
+    Covid Stats
+  </h1>,
+  <form
+    className="text-center  m-2"
+  >
+    <input
+      className="bg-inherit text-inherit border p-1 mt-2"
+      onChange={[Function]}
+      type="date"
+    />
+  </form>,
+  <div
+    className="grid grid-cols-1 sm:grid-cols-2 gap-1 m-7 border-box"
+  >
+    <div
+      className="sm:col-span-2"
+      role="presentation"
+    >
+      <h1
+        className="text-4xl mb-3 text-center"
+      >
+        World Total
+      </h1>
+      <h1
+        className="text-2xl mb-3 text-center"
+      />
+      <div
+        className="border p-8 cursor-pointer flex flex-col items-center gap-1"
+      >
+        <h3
+          className="text-lg"
+        >
+          Total Confirmed Cases :
+          0
+        </h3>
+        <h3
+          className="text-lg"
+        >
+          Total Deaths :
+          0
+        </h3>
+        <h3
+          className="text-lg"
+        >
+          Total Recovered :
+          0
+        </h3>
+        <h3
+          className="text-lg"
+        >
+          Total Open Cases :
+          0
+        </h3>
+      </div>
+    </div>
+  </div>,
+]
+`;
