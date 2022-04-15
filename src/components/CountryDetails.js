@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-const CountryDetails = ({ selectedCountry }) => {
-  const selectedContinent = useSelector((state) => state.continent.continent);
+const CountryDetails = () => {
+  const { continentId, countryId } = useParams();
+
   const selectedCountryData = useSelector(
-    (state) => state.covidData.continents[selectedContinent].countries[selectedCountry],
+    (state) => state.covidData.continents[continentId].countries[countryId],
   );
 
   return (
@@ -61,7 +62,4 @@ const CountryDetails = ({ selectedCountry }) => {
   );
 };
 
-CountryDetails.propTypes = {
-  selectedCountry: PropTypes.string.isRequired,
-};
 export default CountryDetails;

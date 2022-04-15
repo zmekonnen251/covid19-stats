@@ -1,16 +1,22 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { setContinent } from '../redux/reducer';
 import CountryMatrixCard from './CountryMatrixCard';
 
 const CountriesList = () => {
-  const selectedContinent = useSelector((state) => state.continent.continent);
+  const { continentId } = useParams();
+
+  const dispatch = useDispatch();
+
+  dispatch(setContinent(continentId));
 
   const continentData = useSelector(
-    (state) => state.covidData.continents[selectedContinent].countries,
+    (state) => state.covidData.continents[continentId].countries,
   );
   const name = useSelector(
-    (state) => state.covidData.continents[selectedContinent].name,
+    (state) => state.covidData.continents[continentId].name,
   );
   return (
     <>
@@ -24,6 +30,7 @@ const CountriesList = () => {
           return (
             <CountryMatrixCard
               key={uuidv4()}
+              selectedContinent={continentId}
               name={countryName}
               totalConfirmed={totalConfirmed}
               totalDeath={totalDeath}

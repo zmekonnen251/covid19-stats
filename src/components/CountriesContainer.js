@@ -5,13 +5,10 @@ import CountryDetails from './CountryDetails';
 
 const CountriesContainer = () => {
   const country = useSelector((state) => state.country.country);
+  const selectedContinent = useSelector((state) => state.continent.continent);
   return (
     <>
-      {!country ? (
-        <CountriesList />
-      ) : (
-        <CountryDetails selectedCountry={country || ''} />
-      )}
+      {!country ? <CountriesList id={selectedContinent} /> : <CountryDetails />}
     </>
   );
 };
