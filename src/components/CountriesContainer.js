@@ -5,7 +5,15 @@ import CountryDetails from './CountryDetails';
 
 const CountriesContainer = () => {
   const country = useSelector((state) => state.country.country);
-  return <>{!country ? <CountriesList /> : <CountryDetails />}</>;
+  return (
+    <>
+      {!country ? (
+        <CountriesList />
+      ) : (
+        <CountryDetails selectedCountry={country || ''} />
+      )}
+    </>
+  );
 };
 
 export default CountriesContainer;

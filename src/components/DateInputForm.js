@@ -4,9 +4,9 @@ import { loadData } from '../redux/reducer';
 
 const DateInputForm = () => {
   const dispatch = useDispatch();
-  const [date, setDate] = useState('');
 
   const selectedDate = useSelector((state) => state.covidData.date);
+  const [date, setDate] = useState(selectedDate);
 
   const DateChangeHandler = (event) => {
     const inputDate = event.target.value;

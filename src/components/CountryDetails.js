@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-const CountryDetails = () => {
-  const selectedCountry = useSelector((state) => state.country.country);
+const CountryDetails = ({ selectedCountry }) => {
   const selectedContinent = useSelector((state) => state.continent.continent);
   const selectedCountryData = useSelector(
     (state) => state.covidData.continents[selectedContinent].countries[selectedCountry],
@@ -61,4 +61,7 @@ const CountryDetails = () => {
   );
 };
 
+CountryDetails.propTypes = {
+  selectedCountry: PropTypes.string.isRequired,
+};
 export default CountryDetails;

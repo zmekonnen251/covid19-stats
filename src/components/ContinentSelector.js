@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { loadData } from '../redux/reducer';
 import ContinentMatrixCard from './ContinentMatrixCard';
 import DateInputForm from './DateInputForm';
 import WorldTotal from './WorldTotal';
 
 const ContinentSelector = () => {
-  const dispatch = useDispatch();
   const data = useSelector((state) => state.covidData.continents);
-
-  useEffect(() => {
-    dispatch(loadData());
-  }, []);
 
   return (
     <>
