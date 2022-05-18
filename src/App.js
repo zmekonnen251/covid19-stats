@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="box-border text-white bg-pink-700 pb-3 mt-0 h-full">
+      <div className="box-border text-white bg-pink-700 pb-3 m-0 h-full">
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Main />} />
