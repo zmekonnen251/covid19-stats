@@ -31,28 +31,28 @@ const CountryMatrixCard = (props) => {
           .split(' ')
           .join('_')}`}
         onClick={countryMatrixClickHandler}
-        className="relative shadow-2xl shadow-slate-700  hover:bg-pink-600 hover:w-[99%] h-[200px] w-full  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
+        className="relative opacity-70 rounded-lg hover:border bg-pink-800 hover:bg-pink-700 hover:w-[99%] h-[200px] w-full  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
         role="presentation"
       >
         <div
-          className="absolute box-border inset-2 bottom-8 sm:left-[-12rem] z-0 opacity-20"
+          className="absolute box-border left-[-170px] inset-1 bottom-8  z-0 opacity-20"
           style={{
             backgroundImage: `url(https://mapsvg.com/static/maps/geo-calibrated/${name
               .split('_')
               .join('-')
               .toLowerCase()}.svg)`,
-            backgroundSize: 'contain',
+            backgroundSize: '15%',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
           }}
         />
         <div className="absolute right-1 bottom-4">
-          <h1 className="text-3xl">{name}</h1>
+          <h1 className="text-2xl">{name}</h1>
           <h3 className="text-lg">
             Total Confirmed Cases :
             {` ${totalConfirmed}`}
           </h3>
-          <h3 className="text-lg">
+          <h3 className="text-base">
             Total Deaths :
             {` ${totalDeath}`}
           </h3>

@@ -9,10 +9,10 @@ const ContinentSelector = () => {
   const data = useSelector((state) => state.covidData.continents);
 
   return (
-    <>
+    <div className="mt-[100px] pb-12">
       <h1 className="text-3xl font-bold underline text-center">Covid Stats</h1>
       <DateInputForm />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 m-7 border-box">
+      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 gap-3 m-7 border-box">
         <WorldTotal />
         {Object.keys(data).map((continent) => {
           const continentName = data[continent].name;
@@ -35,7 +35,7 @@ const ContinentSelector = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

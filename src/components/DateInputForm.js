@@ -18,7 +18,7 @@ const DateInputForm = () => {
   }, [date]);
   return (
     <>
-      <form className="text-center  m-2">
+      <form className="text-center  m-1 mt-5">
         <input
           type="date"
           onChange={DateChangeHandler}

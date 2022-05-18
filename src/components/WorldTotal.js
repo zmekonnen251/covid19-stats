@@ -22,10 +22,13 @@ const WorldTotal = () => {
     });
   });
   return (
-    <div role="presentation" className=" sm:col-span-2">
+    <div
+      role="presentation"
+      className="rounded-lg opacity-70 p-10 bg-pink-800 hover:bg-pink-700 sm:col-span-2 mt-4"
+    >
       <h1 className="text-4xl mb-3 text-center">World Total</h1>
       <h1 className="text-2xl mb-3 text-center">{selectedDate}</h1>
-      <div className="relative shadow-xl shadow-slate-700 hover:bg-pink-600 hover:border-0 hover:backdrop-brightness-20 p-16 cursor-pointer flex flex-col items-end gap-1">
+      <div className="relative hover:backdrop-brightness-20 p-16 cursor-pointer flex flex-col items-end gap-1">
         <div
           className="absolute inset-2 sm:left-[-35rem] z-0 opacity-20"
           style={{

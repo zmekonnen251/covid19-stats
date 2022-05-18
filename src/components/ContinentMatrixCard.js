@@ -24,10 +24,10 @@ const ContinentMatrixCard = (props) => {
     <>
       <NavLink
         to={`continent/${name}`}
-        className="relative shadow-xl shadow-slate-700 hover:border-0 hover:bg-pink-600 hover:w-[99%] p-8 cursor-pointer flex flex-col justify-end items-end gap-1"
+        className="rounded-lg opacity-70 relative shadow-xl bg-pink-800  hover:border-0 hover:bg-pink-700 hover:w-[99%] p-8 cursor-pointer flex flex-col justify-end items-end gap-1"
       >
         <div
-          className="absolute inset-2 bottom-8 sm:left-[-10rem] z-0 opacity-20"
+          className="absolute inset-3 bottom-8  z-0 opacity-20"
           role="presentation"
           onClick={continentMatrixClickHandler}
           style={{

@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-20 opacity-1 flex justify-between items-center h-10 px-3 bg-pink-800 mb-2">
+      <nav className="fixed top-0 w-full opacity-70 z-20 opacity-1 flex justify-between items-center h-10 p-5 pb-8 bg-pink-700 ">
         <NavLink exact="true" to="/">
           <button
             type="button"
