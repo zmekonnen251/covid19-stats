@@ -31,7 +31,7 @@ const CountryMatrixCard = (props) => {
           .split(' ')
           .join('_')}`}
         onClick={countryMatrixClickHandler}
-        className="relative shadow-2xl shadow-slate-700  hover:bg-pink-600 hover:w-[99%] h-[200px] w-auto  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
+        className="relative shadow-2xl shadow-slate-700  hover:bg-pink-600 hover:w-[99%] h-[200px] w-full  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
         role="presentation"
       >
         <div

@@ -27,7 +27,7 @@ const CountryDetails = () => {
       />
       <div
         role="presentation"
-        className="z-10 flex flex-col ml-4 mr-4 mt-2 sm:ml-28 sm:mr-28 sm:mt-10"
+        className="z-10 flex flex-col ml-4 mr-4 sm:mt-14 sm:ml-28 sm:mr-28 mt-[5rem]"
       >
         <h1 className="text-center text-4xl mb-4">
           {selectedCountryData.name}
