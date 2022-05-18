@@ -22,23 +22,34 @@ const WorldTotal = () => {
     });
   });
   return (
-    <div role="presentation" className="sm:col-span-2">
+    <div role="presentation" className=" sm:col-span-2">
       <h1 className="text-4xl mb-3 text-center">World Total</h1>
       <h1 className="text-2xl mb-3 text-center">{selectedDate}</h1>
-      <div className="border p-8 cursor-pointer flex flex-col items-center gap-1">
-        <h3 className="text-lg">
+      <div className="relative shadow-xl shadow-slate-700 hover:bg-pink-600 hover:border-0 hover:backdrop-brightness-20 p-16 cursor-pointer flex flex-col items-end gap-1">
+        <div
+          className="absolute inset-2 sm:left-[-35rem] z-0 opacity-20"
+          style={{
+            backgroundImage:
+              'url( https://mapsvg.com/static/maps/geo-calibrated/world.svg)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+        />
+        <h3 className="text-xl">
           Total Confirmed Cases :
           {totalConfirmed}
         </h3>
+
         <h3 className="text-lg">
           Total Deaths :
           {totalDeaths}
         </h3>
-        <h3 className="text-lg">
+        <h3 className="text-xl">
           Total Recovered :
           {totalRecovered}
         </h3>
-        <h3 className="text-lg">
+        <h3 className="text-xl">
           Total Open Cases :
           {totalOpenCases}
         </h3>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { loadData } from './redux/reducer';
 import CountryDetails from './components/CountryDetails';
@@ -10,22 +10,14 @@ import CountriesList from './components/CountriesList';
 const App = () => {
   const dispatch = useDispatch();
 
-  const selectedCountry = useSelector((state) => state.country.country);
-  const selectedContinent = useSelector((state) => state.continent.continent);
-  const selectedDate = useSelector((state) => state.covidData.date);
-
   useEffect(() => {
     dispatch(loadData());
   }, []);
 
   return (
     <Router>
-      <div className="box-border text-white bg-lightpink pb-3 mt-0">
-        <NavBar
-          selectedContinent={selectedContinent}
-          selectedCountry={selectedCountry}
-          selectedDate={selectedDate}
-        />
+      <div className="box-border text-white bg-pink-700 pb-3 mt-0 h-full">
+        <NavBar />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route

@@ -26,12 +26,27 @@ const CountryMatrixCard = (props) => {
 
   return (
     <>
-      <NavLink to={`/continent/${selectedContinent}/details/${name}`}>
+      <NavLink
+        to={`/continent/${selectedContinent}/details/${name
+          .split(' ')
+          .join('_')}`}
+        onClick={countryMatrixClickHandler}
+        className="relative shadow-2xl shadow-slate-700  hover:bg-pink-600 hover:w-[99%] h-[200px] w-auto  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
+        role="presentation"
+      >
         <div
-          role="presentation"
-          onClick={countryMatrixClickHandler}
-          className="relative border p-8 cursor-pointer flex flex-col items-center gap-1"
-        >
+          className="absolute box-border inset-2 bottom-8 sm:left-[-12rem] z-0 opacity-20"
+          style={{
+            backgroundImage: `url(https://mapsvg.com/static/maps/geo-calibrated/${name
+              .split('_')
+              .join('-')
+              .toLowerCase()}.svg)`,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute right-1 bottom-4">
           <h1 className="text-3xl">{name}</h1>
           <h3 className="text-lg">
             Total Confirmed Cases :

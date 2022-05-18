@@ -1,12 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FaAngleLeft } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { setContinent, setCountry } from '../redux/reducer';
 
-const NavBar = ({ selectedContinent, selectedCountry, selectedDate }) => {
+const NavBar = () => {
   const dispatch = useDispatch();
+  const selectedContinent = useSelector((state) => state.continent.continent);
+  const selectedCountry = useSelector((state) => state.country.country);
+  const selectedDate = useSelector((state) => state.covidData.date);
+  console.log(selectedContinent);
+  console.log(selectedCountry);
 
   return (
     <>
@@ -23,25 +27,15 @@ const NavBar = ({ selectedContinent, selectedCountry, selectedDate }) => {
             }}
             className="m-3 font-bold flex text-lg mt-5"
           >
-            {selectedContinent ? (
-              <div>
-                <FaAngleLeft className="inline" />
-                {selectedDate}
-              </div>
-            ) : (
-              ' '
-            )}
+            <div>
+              <FaAngleLeft className="inline" />
+              {selectedDate}
+            </div>
           </button>
         </NavLink>
       </nav>
     </>
   );
-};
-
-NavBar.propTypes = {
-  selectedContinent: PropTypes.string.isRequired,
-  selectedCountry: PropTypes.string.isRequired,
-  selectedDate: PropTypes.string.isRequired,
 };
 
 export default NavBar;
