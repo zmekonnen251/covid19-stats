@@ -10,8 +10,6 @@ const NavBar = () => {
   const selectedContinent = useSelector((state) => state.continent.continent);
   const selectedCountry = useSelector((state) => state.country.country);
   const selectedDate = useSelector((state) => state.covidData.date);
-  console.log(selectedContinent);
-  console.log(selectedCountry);
 
   return (
     <>
