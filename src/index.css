@@ -9,6 +9,9 @@ html {
 }
 
 body {
-  background-color: #c5346b;
+  --tw-bg-opacity: 1;
+
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
   margin: 0;
+  padding: 0;
 }

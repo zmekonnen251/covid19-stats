@@ -22,24 +22,38 @@ const ContinentMatrixCard = (props) => {
 
   return (
     <>
-      <NavLink to={`continent/${name}`}>
+      <NavLink
+        to={`continent/${name}`}
+        className="rounded-lg opacity-70 relative shadow-xl bg-pink-800  hover:border-0 hover:bg-pink-700 hover:w-[99%] p-8 cursor-pointer flex flex-col justify-end items-end gap-1"
+      >
         <div
-          className="relative border p-8 cursor-pointer flex flex-col items-center gap-1"
+          className="absolute inset-3 bottom-8  z-0 opacity-20"
           role="presentation"
           onClick={continentMatrixClickHandler}
-        >
-          <h1 className="text-4xl">{name}</h1>
-          <h3 className="text-lg">
-            Total Confirmed Cases :
-            {` ${totalConfirmed}`}
-          </h3>
-          <h3 className="text-lg">
-            Total Deaths :
-            {` ${totalDeath}`}
-          </h3>
-          <div className="absolute bottom-1 right-1 flex justify-end">
-            <BsFillArrowDownRightSquareFill />
-          </div>
+          style={{
+            backgroundImage: `url(https://mapsvg.com/static/maps/geo-calibrated/${
+              name === 'Oceania'
+                ? 'australia'
+                : name.split('_').join('-').toLowerCase()
+            }.svg)`,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+        />
+        <h1 className="text-4xl z-10 ">
+          {name.split('_').join(' ').toUpperCase()}
+        </h1>
+        <h3 className="text-lg z-10">
+          Total Confirmed Cases :
+          {` ${totalConfirmed}`}
+        </h3>
+        <h3 className="text-lg z-10">
+          Total Deaths :
+          {` ${totalDeath}`}
+        </h3>
+        <div className="absolute bottom-1 right-1 flex justify-end z-10">
+          <BsFillArrowDownRightSquareFill />
         </div>
       </NavLink>
     </>

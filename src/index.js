@@ -8,7 +8,7 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <div className="h-screen bg-lightpink">
+      <div className="h-screen">
         <App />
       </div>
     </Provider>

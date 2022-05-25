@@ -1,5 +1,5 @@
 import axios from 'axios';
-import getContinent from './continent';
+import getContinent from '../modules/continent';
 import { LOAD_DATA, SET_CONTINENT, SET_COUNTRY } from './actionTypes';
 
 const covidInitial = { date: '', continents: {} };
@@ -39,10 +39,10 @@ export const loadData = (selectedDate = '') => {
     continents: {
       Africa: { name: 'Africa', countries: {} },
       Europe: { name: 'Europe', countries: {} },
-      North_America: { name: 'North America', countries: {} },
+      North_America: { name: 'North_America', countries: {} },
       Oceania: { name: 'Oceania', countries: {} },
       Asia: { name: 'Asia', countries: {} },
-      South_America: { name: 'South America', countries: {} },
+      South_America: { name: 'South_America', countries: {} },
     },
   };
 
@@ -56,7 +56,7 @@ export const loadData = (selectedDate = '') => {
     continent.date = newDate;
     Object.keys(finalData.countries).forEach((c) => {
       const country = finalData.countries[c];
-      switch (getContinent(country.name)) {
+      switch (getContinent(country.name.split('_').join(' '))) {
         case 'Europe':
           continent.continents.Europe.countries[country.name] = {
             name: country.name,

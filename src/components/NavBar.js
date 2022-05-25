@@ -1,16 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FaAngleLeft } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { BsFillGearFill } from 'react-icons/bs';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { setContinent, setCountry } from '../redux/reducer';
 
-const NavBar = ({ selectedContinent, selectedCountry, selectedDate }) => {
+const NavBar = () => {
   const dispatch = useDispatch();
+  const selectedContinent = useSelector((state) => state.continent.continent);
+  const selectedCountry = useSelector((state) => state.country.country);
+  const selectedDate = useSelector((state) => state.covidData.date);
 
   return (
     <>
-      <nav>
+      <nav className="fixed top-0 w-full opacity-70 z-20 opacity-1 flex justify-between items-center h-10 p-5 pb-8 bg-pink-700 ">
         <NavLink exact="true" to="/">
           <button
             type="button"
@@ -23,25 +26,16 @@ const NavBar = ({ selectedContinent, selectedCountry, selectedDate }) => {
             }}
             className="m-3 font-bold flex text-lg mt-5"
           >
-            {selectedContinent ? (
-              <div>
-                <FaAngleLeft className="inline" />
-                {selectedDate}
-              </div>
-            ) : (
-              ' '
-            )}
+            <div>
+              <FaAngleLeft className="inline" />
+              {selectedDate}
+            </div>
           </button>
         </NavLink>
+        <BsFillGearFill width="10px" />
       </nav>
     </>
   );
-};
-
-NavBar.propTypes = {
-  selectedContinent: PropTypes.string.isRequired,
-  selectedCountry: PropTypes.string.isRequired,
-  selectedDate: PropTypes.string.isRequired,
 };
 
 export default NavBar;
