@@ -31,7 +31,7 @@ const CountryMatrixCard = (props) => {
           .split(' ')
           .join('_')}`}
         onClick={countryMatrixClickHandler}
-        className="relative opacity-70 rounded-lg hover:border bg-pink-800 hover:bg-pink-700 hover:w-[99%] h-[200px] w-full  p-16 cursor-pointer flex flex-col justify-between items-end gap-6"
+        className="relative flex flex-col justify-end items-end pb-8 pr-8 opacity-70 rounded-lg hover:border bg-pink-800 hover:bg-pink-700 hover:w-[99%] h-[200px] w-full  cursor-pointer"
         role="presentation"
       >
         <div
@@ -46,19 +46,19 @@ const CountryMatrixCard = (props) => {
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute right-1 bottom-4">
-          <h1 className="text-2xl">{name}</h1>
+        <div className="relative flex flex-col justify-end items-start">
+          <h1 className="text-3xl">{name}</h1>
           <h3 className="text-lg">
-            Total Confirmed Cases :
-            {` ${totalConfirmed}`}
+            <span className="text-lg sm:text-xl">Total Cases :</span>
+            <span className="text-2xl">{totalConfirmed}</span>
           </h3>
           <h3 className="text-base">
-            Total Deaths :
-            {` ${totalDeath}`}
+            <span className="text-lg sm:text-xl">Total Deaths : </span>
+            <span className="text-2xl">{totalDeath}</span>
           </h3>
-          <div className="absolute bottom-1 right-1 flex justify-end">
-            <BsFillArrowDownRightSquareFill />
-          </div>
+        </div>
+        <div className="absolute bottom-2 right-1 flex justify-end">
+          <BsFillArrowDownRightSquareFill />
         </div>
       </NavLink>
     </>

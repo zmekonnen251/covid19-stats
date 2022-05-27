@@ -28,7 +28,7 @@ const WorldTotal = () => {
     >
       <h1 className="text-4xl mb-3 text-center">World Total</h1>
       <h1 className="text-2xl mb-3 text-center">{selectedDate}</h1>
-      <div className="relative hover:backdrop-brightness-20 p-16 cursor-pointer flex flex-col items-end gap-1">
+      <div className="relative hover:backdrop-brightness-20 p-2 sm:p-16 cursor-pointer flex flex-col items-end gap-1">
         <div
           className="absolute inset-2 sm:left-[-35rem] z-0 opacity-20"
           style={{
@@ -40,21 +40,21 @@ const WorldTotal = () => {
           }}
         />
         <h3 className="text-xl">
-          Total Confirmed Cases :
-          {totalConfirmed}
+          <span className="text-lg sm:text-xl">Total Confirmed Cases : </span>
+          <span className="text-2xl">{totalConfirmed}</span>
         </h3>
 
         <h3 className="text-lg">
-          Total Deaths :
-          {totalDeaths}
+          <span className="text-lg sm:text-xl">Total Deaths : </span>
+          <span className="text-2xl">{totalDeaths}</span>
         </h3>
-        <h3 className="text-xl">
-          Total Recovered :
-          {totalRecovered}
+        <h3 className="text-xl hidden sm:block">
+          <span className="text-xl">Total Recovered : </span>
+          <span className="text-2xl">{totalRecovered}</span>
         </h3>
-        <h3 className="text-xl">
-          Total Open Cases :
-          {totalOpenCases}
+        <h3 className="text-xl hidden sm:block">
+          <span className="text-xl">Total Open Cases : </span>
+          <span className="text-2xl">{totalOpenCases}</span>
         </h3>
       </div>
     </div>

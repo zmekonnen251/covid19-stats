@@ -41,16 +41,16 @@ const ContinentMatrixCard = (props) => {
             backgroundPosition: 'center',
           }}
         />
-        <h1 className="text-4xl z-10 ">
+        <h1 className="text-3xl z-10 ">
           {name.split('_').join(' ').toUpperCase()}
         </h1>
         <h3 className="text-lg z-10">
-          Total Confirmed Cases :
-          {` ${totalConfirmed}`}
+          <span className="text-lg sm:text-xl">Total Cases : </span>
+          <span className="text-2xl">{totalConfirmed}</span>
         </h3>
         <h3 className="text-lg z-10">
-          Total Deaths :
-          {` ${totalDeath}`}
+          <span className="text-lg sm:text-xl">Total Deaths : </span>
+          <span className="text-2xl">{totalDeath}</span>
         </h3>
         <div className="absolute bottom-1 right-1 flex justify-end z-10">
           <BsFillArrowDownRightSquareFill />
